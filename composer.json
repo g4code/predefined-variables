@@ -3,7 +3,6 @@
   "description": "php predefined variables facade",
   "keywords": [
     "server",
-    "$_SERVER",
     "predefined",
     "variables",
     "facade",
