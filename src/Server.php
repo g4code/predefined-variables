@@ -36,6 +36,16 @@ final class Server
         return $_SERVER['REMOTE_ADDR'];
     }
 
+    public function serverAddr()
+    {
+        return $_SERVER['SERVER_ADDR'];
+    }
+
+    public function serverName()
+    {
+        return $_SERVER['SERVER_NAME'];
+    }
+
     public function requestUri()
     {
         return $_SERVER['REQUEST_URI'];
