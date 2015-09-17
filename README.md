@@ -1,9 +1,14 @@
 predefined-variables
 ======
 
-> predefined-variables - [php](http://php.net) library
+> php predefined variables facade - [php](http://php.net) library
 
 ## Install
+Via Composer
+
+```sh
+composer require g4/predefined-variables
+```
 
 ## Usage
 
