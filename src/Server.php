@@ -2,7 +2,7 @@
 
 namespace G4\PredefinedVariables;
 
-final class Server
+class Server
 {
     public function has($key)
     {
