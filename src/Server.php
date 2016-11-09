@@ -10,19 +10,30 @@ class Server
             && $_SERVER[$key] !== '';
     }
 
+    public function exists($key)
+    {
+        return array_key_exists($key, $_SERVER);
+    }
+
     public function httpHost()
     {
-        return $_SERVER['HTTP_HOST'];
+        return $this->exists('HTTP_HOST')
+            ? $_SERVER['HTTP_HOST']
+            : null;
     }
 
     public function httpReferer()
     {
-        return $_SERVER["HTTP_REFERER"];
+        return $this->exists('HTTP_REFERER')
+            ? $_SERVER['HTTP_REFERER']
+            : null;
     }
 
     public function httpUserAgent()
     {
-        return $_SERVER['HTTP_USER_AGENT'];
+        return $this->exists('HTTP_USER_AGENT')
+            ? $_SERVER['HTTP_USER_AGENT']
+            : null;
     }
 
     public function remoteAddr()
@@ -39,16 +50,22 @@ class Server
 
     public function serverAddr()
     {
-        return $_SERVER['SERVER_ADDR'];
+        return $this->exists('SERVER_ADDR')
+            ? $_SERVER['SERVER_ADDR']
+            : null;
     }
 
     public function serverName()
     {
-        return $_SERVER['SERVER_NAME'];
+        return $this->exists('SERVER_NAME')
+            ? $_SERVER['SERVER_NAME']
+            : null;
     }
 
     public function requestUri()
     {
-        return $_SERVER['REQUEST_URI'];
+        return $this->exists('REQUEST_URI')
+            ? $_SERVER['REQUEST_URI']
+            : null;
     }
 }
