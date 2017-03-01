@@ -68,4 +68,11 @@ class Server
             ? $_SERVER['REQUEST_URI']
             : null;
     }
+
+    public function queryString()
+    {
+        return $this->exists('QUERY_STRING')
+            ? $_SERVER['QUERY_STRING']
+            : null;
+    }
 }
