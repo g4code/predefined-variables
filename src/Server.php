@@ -75,4 +75,11 @@ class Server
             ? $_SERVER['QUERY_STRING']
             : null;
     }
+
+    public function httpLanguage()
+    {
+        return $this->exists('HTTP_ACCEPT_LANGUAGE')
+            ? $_SERVER['HTTP_ACCEPT_LANGUAGE']
+            : null;
+    }
 }
