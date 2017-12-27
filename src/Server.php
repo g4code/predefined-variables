@@ -82,4 +82,12 @@ class Server
             ? $_SERVER['HTTP_ACCEPT_LANGUAGE']
             : null;
     }
+
+    /**
+     * @return bool
+     */
+    public function isHttps()
+    {
+        return isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off';
+    }
 }
