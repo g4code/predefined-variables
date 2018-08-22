@@ -24,5 +24,6 @@ composer require g4/predefined-variables
 
 ## License
 
+
 (The MIT License)
 see LICENSE file for details...
