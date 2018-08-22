@@ -36,6 +36,13 @@ class Server
             : null;
     }
 
+    public function httpXNDUuid()
+    {
+        return $this->exists('HTTP_X_ND_UUID')
+            ? $_SERVER['HTTP_X_ND_UUID']
+            : null;
+    }
+
     public function remoteAddr()
     {
         $remoteAddr = $_SERVER['REMOTE_ADDR'];
