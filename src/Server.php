@@ -4,6 +4,7 @@ namespace G4\PredefinedVariables;
 
 class Server
 {
+
     public function has($key)
     {
         return isset($_SERVER[$key])
@@ -95,6 +96,7 @@ class Server
      */
     public function isHttps()
     {
-        return isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off';
+        return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+            || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
     }
 }
