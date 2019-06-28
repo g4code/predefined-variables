@@ -96,7 +96,7 @@ class Server
      */
     public function isHttps()
     {
-        return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
-            || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+        return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off')
+            || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https');
     }
 }
