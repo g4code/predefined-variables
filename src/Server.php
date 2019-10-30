@@ -46,7 +46,11 @@ class Server
 
     public function remoteAddr()
     {
-        $remoteAddr = $_SERVER['REMOTE_ADDR'];
+        $remoteAddr = null;
+
+        if (isset($_SERVER['REMOTE_ADDR'])) {
+            $remoteAddr = $_SERVER['REMOTE_ADDR'];
+        }
         if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
             $remoteAddr = $_SERVER['HTTP_X_FORWARDED_FOR'];
         }
